@@ -1,0 +1,43 @@
+<div class="show">
+  <div class="article_name">
+  <span class="name">
+    <%= @article.name %>
+  </span></br>
+  <% if @article.image.attached? %>
+    <%= image_tag @article.image.variant(resize_to_limit: [400, 400]), class: "content_post" %>
+  </div>
+  <div class="article_text">
+  <%= simple_format(@article.text) %></br>
+  <%= @article.created_at.strftime("%Y/%m/%d %H:%M") %>
+  </div>
+<% end %>
+</div>
+ <div class="article_comment">
+      <%= form_with(model: [@article, @comment], local: true) do |form| %>
+      <%= form.text_field :name,placeholder: "お名前", id:"comment_name" %>
+        <%= form.text_area :text, placeholder: "コメントする", id:"comment_text" %>
+        <%= form.submit "SEND" %>
+      <% end %>
+   <div class="article_comments">
+      <h4>＜コメント一覧＞</h4>
+      <% @comments.each do |comment| %>
+      <div class="post_comment">
+       <%= comment.name + "："%>
+          <%= comment.text %></br>
+          <div class="comment_time">
+           <%= comment.created_at.strftime("%Y/%m/%d %H:%M") %>
+           </div>
+           </div>
+      <% end %>
+    </div>
+    </div>
+<div class="more">
+    <ul class="more_list">
+      <li>
+        <%= link_to '編集', edit_article_path(@article.id) %>
+      </li>
+      <li>
+        <%= link_to '削除', article_path(@article.id), data: { turbo_method: :delete } %>
+      </li>
+    </ul>
+  </div>
