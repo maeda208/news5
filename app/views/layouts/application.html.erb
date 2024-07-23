@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>News5</title>
+    <title>news5</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,12 @@
   </head>
 
   <body>
+     <header class="header">
+      <div class="header__bar">
+        <h1 class="grid-6"><a href="/">誤字のニュース</a></h1>
+      </div>
+       
+    </header>
     <%= yield %>
   </body>
 </html>

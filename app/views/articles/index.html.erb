@@ -1,0 +1,18 @@
+<div class="contents">
+  <% @articles.each do |article| %>
+  <%= link_to article_path(article) do %>
+   <div class="article">
+  <span class="name">
+    <%= article.name %>
+  </span>
+  <% if article.image.attached? %>
+    <%= image_tag article.image.variant(resize_to_limit: [150, 150]), class: "content_post" %>
+  </div>
+  <% end %>
+  <% end %>
+  
+<% end %>
+  <div class="user_nav_grid">
+    <%= link_to "新規募集", new_article_path, class: :nav__btn %>
+        </div>
+</div>
