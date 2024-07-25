@@ -33,6 +33,7 @@
       <% end %>
     </div>
     </div>
+    <% if user_signed_in? %>
 <div class="more">
     <ul class="more_list">
       <li>
@@ -45,4 +46,5 @@
       <%= link_to 'ログイン',new_user_session_path  %>
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { turbo_method: :delete }, class: :nav__logout %>
     </ul>
+    <% end %>
   </div>
