@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.all
+    @articles = Article.includes(:user).order("created_at DESC")
   end
   def new
     @article = Article.new
@@ -30,6 +30,6 @@ class ArticlesController < ApplicationController
 
   private
   def article_params
-    params.require(:article).permit(:name, :image, :text)
+    params.require(:article).permit(:name, :image, :text).merge(user_id: current_user.id)
   end
 end

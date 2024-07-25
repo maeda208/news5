@@ -2,6 +2,9 @@
   <% @articles.each do |article| %>
   <%= link_to article_path(article) do %>
    <div class="article">
+     <span class="date">
+          <%= article.created_at.strftime("%Y-%m-%d ") %>
+        </span>
   <span class="name">
     <%= article.name %>
   </span>
@@ -12,7 +15,9 @@
   <% end %>
   
 <% end %>
+ <% if user_signed_in? %>
   <div class="user_nav_grid">
     <%= link_to "新規募集", new_article_path, class: :nav__btn %>
         </div>
+        <% end %>
 </div>

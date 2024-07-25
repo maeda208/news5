@@ -325,6 +325,25 @@ footer p {
   align-items: center;
 }
 
+.article img.content_post {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  margin-left: auto; 
+}
+
+.article .name {
+  flex: 1; 
+  font-weight: 1000;
+  font-size: 40px;
+}
+
+.article .date {
+  margin-left: 10px;
+  font-size: 20px;
+  color: blue;
+}
+
 .show{
   font-size: 40px;
   font-weight: 700;
@@ -337,7 +356,16 @@ footer p {
 .article_text{
   font-size: 20px;
   margin: 0 auto;
-  width: 1000px;
+  width: 800px;
+}
+
+.confirmation{
+  color: white;
+  background-color: #dd6d03;
+  font-size: 20px;
+  width: 300px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .content_post{
@@ -371,3 +399,4 @@ background-color: aliceblue;
 .comment_time{
   font-size: 20px;
 }
+
