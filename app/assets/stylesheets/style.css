@@ -315,7 +315,6 @@ footer p {
 
 .article{
   background-color: gainsboro;
-  display: flex;
   border: solid 5px;
   margin-bottom: 5px;
   text-align: center;
@@ -334,12 +333,12 @@ footer p {
 .article .name {
   flex: 1; 
   font-weight: 1000;
-  font-size: 40px;
+  font-size: 20px;
 }
 
-.article .date {
+.date {
   margin-left: 10px;
-  font-size: 20px;
+  font-size: 15px;
   color: blue;
 }
 
@@ -364,7 +363,6 @@ footer p {
   font-size: 20px;
   width: 300px;
   text-align: center;
-  margin: 0 auto;
 }
 
 .content_post{

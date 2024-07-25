@@ -7,14 +7,14 @@
     <%= image_tag @article.image.variant(resize_to_limit: [400, 400]), class: "content_post" %>
   </div>
   <div class="article_text">
-  <%= simple_format(@article.text) %></br>
-  <div class="confirmation">
-    誤字は発券できましたか？
-  </div>
+  <%= simple_format(@article.text) %>
   </div>
 <% end %>
 </div>
  <div class="article_comment">
+   <div class="confirmation">
+    誤字は発券できましたか？
+  </div>
       <%= form_with(model: [@article, @comment], local: true) do |form| %>
       <%= form.text_field :name,placeholder: "お名前", id:"comment_name" %>
         <%= form.text_area :text, placeholder: "コメントする", id:"comment_text" %>
