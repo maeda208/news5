@@ -321,6 +321,7 @@ footer p {
   font-size: 30px;
   justify-content: center;
   align-items: center;
+  display: flex;
 }
 
 .article img.content_post {
