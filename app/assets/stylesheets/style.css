@@ -315,7 +315,7 @@ footer p {
 
 .article{
   background-color: gainsboro;
-  border: solid 5px;
+  border: solid 2px;
   margin-bottom: 5px;
   text-align: center;
   font-size: 30px;
@@ -355,7 +355,6 @@ footer p {
 .article_text{
   font-size: 20px;
   margin: 0 auto;
-  width: 800px;
 }
 
 .confirmation{
